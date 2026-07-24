@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+
+const { title = 'Prof. Nathan Chao' } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A simple personal website for a professor's publications and articles." />
+    <title>{title} | Professor Website</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="profile-wrap">
+          <img src="/images/weve.jpg" alt="Wave image" class="profile-image" />
+          <div class="profile-text">
+            <p class="profile-role">Professor of Humanities</p>
+            <h1>Prof. Nathan Chao</h1>
+            <p class="profile-tagline">Scholar • Writer • Teacher</p>
+          </div>
+        </div>
+      </header>
+
+      <Navigation />
+
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

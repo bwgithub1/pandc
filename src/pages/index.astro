@@ -1,0 +1,68 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Home">
+  <section>
+    <div class="profile-layout">
+      <img src="/images/Chao.jpeg" alt="Professor Chao" class="profile-image" />
+
+      <div>
+        <h2>Biography</h2>
+        <p><strong>Retired Position-</strong> Professor of Engineering Technology, Queensborough Community College of the City of New York</p>
+
+        <p><strong>Best Known For-</strong> Working his students very hard in his classes.</p>
+
+        <p><strong>Quotations-</strong> You just lost 2.5 points for not doing this week's homework!</p>
+
+        <p><strong>Education-</strong></p>
+        <ul>
+          <li>Bachelors in Electrical Engineering - CCNY</li>
+          <li>Masters in Electrical Engineering - Columbia</li>
+          <li>PHD - Cooper Union</li>
+        </ul>
+
+        <p><strong>Personal-</strong> Proudest Achivements</p>
+        <ul>
+          <li>Sons:
+            <ul>
+              <li>Warren, Harvard 1989</li>
+              <li>Justin, Harvard 1992</li>
+              <li>Keenan, Brown 2001</li>
+            </ul>
+          </li>
+          <li>Daughter:
+            <ul>
+              <li>Chloe, Harvard 1996</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .profile-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #d0d7de;
+    flex-shrink: 0;
+    margin-left: auto;
+    order: 2;
+  }
+
+  .profile-layout > div {
+    flex: 1 1 300px;
+    order: 1;
+  }
+</style>
