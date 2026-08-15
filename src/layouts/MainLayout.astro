@@ -1,31 +1,31 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
 
-const { title = 'Prof. Nathan Chao' } = Astro.props;
+const { title = 'Home' } = Astro.props;
 ---
-
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A simple personal website for a professor's publications and articles." />
-    <title>{title} | Professor Website</title>
+    <meta name="description" content="A practical exploration of prayer and belief." />
+    <title>{title} | Who to Pray to</title>
   </head>
   <body>
     <div class="page">
       <header class="site-header">
         <div class="profile-wrap">
-          <img src="/images/weve.jpg" alt="Wave image" class="profile-image" />
-          <div class="profile-text">
             <p class="profile-role">Professor of Humanities</p>
-            <h1>Who to Pray to</h1>
+
+            <div class="top-row">
+              <a href="/" class="brand" aria-label="Home">PandC</a>
+              <h1 class="header-title">Who to Pray to</h1>
+              <span class="right-placeholder" aria-hidden="true"></span>
+            </div>
+
             <p class="profile-tagline">Scholar • Writer • Teacher</p>
           </div>
-        </div>
       </header>
-
-      <Navigation />
 
       <main>
         <slot />

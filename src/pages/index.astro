@@ -1,12 +1,23 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import HomeGrid from '../components/HomeGrid.astro';
+
+const items = [
+  { href: '/intro', label: 'Intro', image: 'https://images.unsplash.com/photo-1505904267569-3f9f3a2f0b6b', excerpt: 'Overview and purpose.' },
+  { href: '/true-believers', label: 'For Believers', image: 'https://images.unsplash.com/photo-1525182008055-f88b95ff7980', excerpt: 'Guidance for believers.' },
+  { href: '/seekers', label: 'For Seekers', image: 'https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f', excerpt: 'Questions for seekers.' },
+  { href: '/doubters', label: 'For Doubters', image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe', excerpt: 'Reflections for doubters.' },
+  { href: '/what-science-says', label: 'Science Says', image: 'https://images.unsplash.com/photo-1581091870622-3c7a5c9b8a2b', excerpt: 'Evidence and inquiry.' },
+  { href: '/my-journey', label: 'My Journey', image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee', excerpt: 'A personal narrative.' },
+  { href: '/our-purpose', label: 'Our Purpose', image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0', excerpt: 'Why this project exists.' },
+  { href: '/secular-places', label: 'Secular Places', image: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e', excerpt: 'Non-religious contexts.' },
+  { href: '/evolution', label: 'Evolution', image: 'https://images.unsplash.com/photo-1528825871115-3581a5387919', excerpt: 'Origins and change.' },
+  { href: '/where-we-are-headed', label: 'Where we are headed', image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470', excerpt: 'Future directions.' }
+];
 ---
 
 <MainLayout title="Home">
-  <section>
-    <h2>Who to Pray To</h2>
-    <p>This site presents a practical, reflective exploration of prayer, belief, and the search for guidance in a plural world.</p>
-    <p>The pages in the menu follow the structure from the document and offer three rationales for approaching prayer: seeking an advocate, choosing a belief system with the least harm, and looking for evidence that may support a broader view of the afterlife.</p>
-    <p>Use the navigation to move through the sections and read the ideas in the order they were presented.</p>
+  <section class="home-section">
+    <HomeGrid items={items} />
   </section>
 </MainLayout>
