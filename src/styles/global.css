@@ -8,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(rgba(247,251,255,0.65), rgba(242,247,251,0.65)), url('/pray/images/bg/hero-light-blue.svg');
+  background-image: linear-gradient(rgba(247,251,255,0.65), rgba(242,247,251,0.65)), url('/pandc/images/bg/hero-light-blue.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
