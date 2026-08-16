@@ -2,6 +2,7 @@
 import '../styles/global.css';
 
 const { title = 'Home' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <!doctype html>
 <html lang="en">
@@ -15,19 +16,30 @@ const { title = 'Home' } = Astro.props;
     <div class="page">
       <header class="site-header">
         <div class="profile-wrap">
-            <p class="profile-role">Professor of Humanities</p>
+          <div class="top-row">
+            <img class="header-image" src={`${base}/images/pray_1.jpg`} alt="Person praying at sunset" />
 
-            <div class="top-row">
-              <a href="/" class="brand" aria-label="Home">PandC</a>
-              <h1 class="header-title">Who to Pray to</h1>
-              <span class="right-placeholder" aria-hidden="true"></span>
+            <div class="profile-text">
+              <p class="profile-role">Professor of Humanities</p>
+              <a href={`${base}/`} class="brand" aria-label="Home">PandC</a>
+              <p class="profile-tagline">Scholar • Writer • Teacher</p>
             </div>
 
-            <p class="profile-tagline">Scholar • Writer • Teacher</p>
+            <div class="header-title-wrap">
+              <h1 class="header-title">Who to Pray to</h1>
+            </div>
+
+            <img class="header-image header-image-right" src={`${base}/images/home/pray_3.jpg`} alt="Prayer image" />
           </div>
+        </div>
       </header>
 
       <main>
+        {title !== 'Home' && (
+          <div class="content-home-link">
+            <a href={`${base}/`} class="home-button">Home</a>
+          </div>
+        )}
         <slot />
       </main>
     </div>

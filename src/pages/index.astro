@@ -2,17 +2,19 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import HomeGrid from '../components/HomeGrid.astro';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const items = [
-  { href: '/intro', label: 'Intro', image: 'https://images.unsplash.com/photo-1505904267569-3f9f3a2f0b6b', excerpt: 'Overview and purpose.' },
-  { href: '/true-believers', label: 'For Believers', image: 'https://images.unsplash.com/photo-1525182008055-f88b95ff7980', excerpt: 'Guidance for believers.' },
-  { href: '/seekers', label: 'For Seekers', image: 'https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f', excerpt: 'Questions for seekers.' },
-  { href: '/doubters', label: 'For Doubters', image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe', excerpt: 'Reflections for doubters.' },
-  { href: '/what-science-says', label: 'Science Says', image: 'https://images.unsplash.com/photo-1581091870622-3c7a5c9b8a2b', excerpt: 'Evidence and inquiry.' },
-  { href: '/my-journey', label: 'My Journey', image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee', excerpt: 'A personal narrative.' },
-  { href: '/our-purpose', label: 'Our Purpose', image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0', excerpt: 'Why this project exists.' },
-  { href: '/secular-places', label: 'Secular Places', image: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e', excerpt: 'Non-religious contexts.' },
-  { href: '/evolution', label: 'Evolution', image: 'https://images.unsplash.com/photo-1528825871115-3581a5387919', excerpt: 'Origins and change.' },
-  { href: '/where-we-are-headed', label: 'Where we are headed', image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470', excerpt: 'Future directions.' }
+  { href: `${base}/intro`, label: 'Intro', image: `${base}/images/home/intro_1.jpg`, excerpt: 'Overview and purpose.' },
+  { href: `${base}/true-believers`, label: 'For Believers', image: `${base}/images/home/believer.jpg`, excerpt: 'Guidance for believers.' },
+  { href: `${base}/seekers`, label: 'For Seekers', image: `${base}/images/home/seeker.jpg`, excerpt: 'Questions for seekers.' },
+  { href: `${base}/doubters`, label: 'For Doubters', image: `${base}/images/home/doubler.jpg`, excerpt: 'Reflections for doubters.' },
+  { href: `${base}/what-science-says`, label: 'Science Says', image: `${base}/images/home/science.jpg`, excerpt: 'Evidence and inquiry.' },
+  { href: `${base}/my-journey`, label: 'My Journey', image: `${base}/images/home/my_jouney.jpg`, excerpt: 'A personal narrative.' },
+  { href: `${base}/our-purpose`, label: 'Our Purpose', image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0', excerpt: 'Why this project exists.' },
+  { href: `${base}/secular-places`, label: 'Secular Places', image: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e', excerpt: 'Non-religious contexts.' },
+  { href: `${base}/evolution`, label: 'Evolution', image: `${base}/images/home/evalution.jpg`, excerpt: 'Origins and change.' },
+  { href: `${base}/where-we-are-headed`, label: 'Where we are headed', image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470', excerpt: 'Future directions.' }
 ];
 ---
 
