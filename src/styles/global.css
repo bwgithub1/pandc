@@ -335,9 +335,15 @@ main {
   margin: 0 auto;
   height: 88px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 14px;
   background: #f8feff;
   padding: 0.2rem;
+}
+
+.home-grid .card[style*="grid-column: span 2;"] img,
+.home-grid .card[style*="grid-column: span 1;"] img {
+  width: 75%;
+  height: 88px;
 }
 
 .card svg, .card img[src$=".svg"] {

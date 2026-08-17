@@ -6,7 +6,21 @@ const { items = [] } = Astro.props;
     <li
       class="card"
       key={item.href}
-      style={index === 4 || index === 5 ? 'grid-column: span 2;' : ''}
+      style={
+        index === 4
+          ? 'grid-column: 2; grid-row: 2;'
+          : index === 5
+            ? 'grid-column: 3; grid-row: 2;'
+            : index === 6
+              ? 'grid-column: 1; grid-row: 3;'
+              : index === 7
+                ? 'grid-column: 2; grid-row: 3;'
+                : index === 8
+                  ? 'grid-column: 3; grid-row: 3;'
+                  : index === 9
+                    ? 'grid-column: 4; grid-row: 3;'
+                    : ''
+      }
     >
       <a href={item.href} aria-label={item.label}>
         <img src={`${item.image}?v=2`} alt={item.label + ' image'} />
