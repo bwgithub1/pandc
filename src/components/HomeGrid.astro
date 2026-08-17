@@ -2,11 +2,15 @@
 const { items = [] } = Astro.props;
 ---
 <ul class="home-grid" role="list">
-  {items.map(item => (
-    <li class="card" key={item.href}>
-      <a href={item.href} aria-label={item.label} style="color: #000 !important;">
+  {items.map((item, index) => (
+    <li
+      class="card"
+      key={item.href}
+      style={index === 4 || index === 5 ? 'grid-column: span 2;' : ''}
+    >
+      <a href={item.href} aria-label={item.label}>
         <img src={`${item.image}?v=2`} alt={item.label + ' image'} />
-        <h3 style="color: #000 !important;">{item.label}</h3>
+        <h3>{item.label}</h3>
       </a>
     </li>
   ))}

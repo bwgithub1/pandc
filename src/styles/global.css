@@ -12,8 +12,21 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: #000;
 }
 
+body,
+body *,
+.page,
+.page *,
+main,
+main *,
+section:not(.hero),
+section:not(.hero) *,
+.page-top,
+.page-top *,
+.content-home-link,
+.content-home-link *,
 a,
 a:visited,
 a:hover,
@@ -41,8 +54,14 @@ main {
 
 .content-home-link {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-bottom: 0.35rem;
+}
+
+.content-home-link-bottom {
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .home-button {
@@ -180,6 +199,33 @@ main {
   pointer-events: none;
 }
 
+.header-actions {
+  position: absolute;
+  right: 0.55rem;
+  bottom: 0.55rem;
+  z-index: 4;
+  pointer-events: auto;
+}
+
+.header-cta {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-align: right;
+  opacity: 0.82;
+}
+
+.header-cta:hover,
+.header-cta:focus-visible {
+  text-decoration: underline;
+  color: #000;
+  opacity: 1;
+}
+
 .top-row .header-title {
   margin: 0;
   font-size: 1.35rem;
@@ -259,7 +305,7 @@ main {
   border-radius: 8px;
   padding: 0.28rem;
   text-align: center;
-  color: #000 !important;
+  color: inherit;
   transition: transform .12s ease, box-shadow .12s ease;
   border: 1px solid rgba(20,60,90,0.03);
 }
@@ -269,11 +315,15 @@ main {
 .home-grid .card a:visited,
 .home-grid .card h3,
 .home-grid .card .excerpt {
-  color: #000 !important;
+  color: inherit;
+}
+
+.home-grid .card * {
+  color: inherit;
 }
 
 .card a {
-  color: #000 !important;
+  color: inherit;
   text-decoration: none;
   display: block;
   outline-offset: 3px;
@@ -299,13 +349,13 @@ main {
 .card h3 {
   margin: 0.6rem 0 0.3rem;
   font-size: 1.05rem;
-  color: #000 !important;
+  color: inherit;
 }
 
 .card .excerpt {
   margin: 0;
   font-size: 0.92rem;
-  color: #000;
+  color: inherit;
 }
 
 .card:focus-within, .card:hover {
@@ -413,7 +463,7 @@ body::before {
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
-  background-color: rgba(250, 253, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.97);
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -434,7 +484,7 @@ body::before {
   top: 0;
   bottom: 0;
   border-radius: 8px;
-  background: linear-gradient(180deg, rgba(247,251,255,0.55), rgba(242,247,251,0.45));
+  background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
   pointer-events: none;
 }
 
