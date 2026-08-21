@@ -1,18 +1,30 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const links = [
-  { href: '/intro', label: 'Intro' },
-  { href: '/true-believers', label: 'For Believers' },
-  { href: '/seekers', label: 'For Seekers' },
-  { href: '/doubters', label: 'For Doubters' },
-  { href: '/what-science-says', label: 'Science Says' },
-  { href: '/my-journey', label: 'My Journey' },
-  { href: '/our-purpose', label: 'Our Purpose' },
-  { href: '/secular-places', label: 'Secular Places' }
+  { href: `${base}/what-science-says`, label: 'Science Says' },
+  { href: `${base}/our-purpose`, label: 'Our Purpose' },
+  { href: `${base}/secular-places`, label: 'Secular Places' },
+  { href: `${base}/evolution`, label: 'Evolution' },
+  { href: `${base}/where-we-are-headed`, label: 'Where we are headed' }
 ];
 ---
 
 <nav class="nav">
-  {links.map((link) => (
-    <a href={link.href}>{link.label}</a>
-  ))}
+  <details class="nav-dropdown">
+    <summary>Rationales</summary>
+    <div class="nav-submenu">
+      <a href={`${base}/true-believers`}>For Believers</a>
+      <a href={`${base}/seekers`}>For Seekers</a>
+      <a href={`${base}/doubters`}>For Doubters</a>
+      <details class="nav-submenu-group">
+        <summary>Evendences</summary>
+        <div class="nav-submenu-child">
+          <a href={`${base}/mary-meeting`}>Meeting</a>
+          <a href={`${base}/mary`}>Mary</a>
+        </div>
+      </details>
+    </div>
+  </details>
+  {links.map((link) => <a href={link.href}>{link.label}</a>)}
 </nav>

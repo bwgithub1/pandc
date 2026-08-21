@@ -1,0 +1,24 @@
+---
+title: For Believers
+image: images/home/believer.jpg
+---
+
+## For Believers
+
+If you can't get your prayers heard, you need to engage an interested advocate as a go between you and god.
+
+We are divided by many different religions. Each one claims to be the only true one. Even though many modern attitudes make room for tolerance, there is no room in the founding texts in western and mideastern beliefs for shared supreme entities. Christianity, Judaism and Muslin each believe that there can be only one true god.
+
+If indeed, there is only a single true god, since no single religion has a majority of the earths population, the remaining majority of the world's people are wasting their time in useless ri orshiping.
+
+If indeed, there is only a single true god, since no single religion has a majority of the earths population, the remaining majority of the world's people are wasting their time in useless rituals and fervor, worshiping a false god.
+
+Today, almost all major religions believe their god or gods are merciful. If that is the case, then decent and virtuous people who prayed to the wrong god may be forgiven after death. They may not have had their prayers answered during life but will not be condemned in their afterlife. They can enter heaven.
+
+All cases assume a person's life on earth inflyences the ofterlfe spirits essence.
+
+Okay, so if your virtuous parents or grandparents are in heaven and aware of those left behind, wouldn't it make sense that you should pray to them as intermediaries to possibly intercede on your behalf to the one and only true god up there. This way you will avoid the mistake of possibly praying to a non existent god.
+
+Your dead loved one provide a channel so you just have to live by the common virtues demanded by all religious beliefs so that you qualify for the heavenly protection. If you are very cautious, you can be a vegetarian. Already accepted in some branches of the major religions is that you don't need to have a rigid dress code. In essence, belief rules are really man made to suit current majority sensibilities.
+
+So based on this (Rationale 1), your best bet to have your prayers answered is to pray to your dead loved ones who will remember you and who led pious lives and therefore are in heaven now to help channel your prayers to the one true god.

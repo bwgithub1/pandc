@@ -23,7 +23,6 @@ const { items = [] } = Astro.props;
       }
     >
       <a href={item.href} aria-label={item.label}>
-        <img src={`${item.image}?v=2`} alt={item.label + ' image'} />
         <h3>{item.label}</h3>
       </a>
     </li>

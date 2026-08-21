@@ -1,8 +1,21 @@
 ---
 import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
 
-const { title = 'Home' } = Astro.props;
+const { title = 'Home', image = '', showHomeLinks = true } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const imageFallback =
+  title === 'For Believers'
+    ? `${base}/images/home/believer.jpg`
+    : title === 'For Seekers'
+      ? `${base}/images/home/seeker.jpg`
+      : title === 'For Doubters'
+        ? `${base}/images/home/doublers_2.jpg`
+        : title === 'Evolution'
+          ? `${base}/images/home/evalution.jpg`
+          : title === 'Our Purpose'
+            ? `${base}/images/home/our.jpg`
+            : `${base}/images/home/pray_1.jpg`;
 ---
 <!doctype html>
 <html lang="en">
@@ -15,38 +28,48 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <body>
     <div class="page">
       <header class="site-header">
-        <div class="profile-wrap">
+        <div class="profile-wrap" style={`--header-background: url("${base}/images/home/banner_1.png")`}>
+          <div class="banner-art" aria-hidden="true">
+            <img class="banner-art-image" src={`${base}/images/home/banner_1.png`} alt="" />
+            <div class="banner-art-fade"></div>
+          </div>
           <div class="top-row">
-            <img class="header-image" src={`${base}/images/home/pray_4.jpg`} alt="Person praying at sunset" />
-
-            <div class="profile-text">
-              <p class="profile-role">Professor of Humanities</p>
-              <p class="profile-tagline">Scholar • Writer • Teacher</p>
-            </div>
-
             <div class="header-title-wrap">
-              <h1 class="header-title">Who to Pray to</h1>
+              <h1 class="header-title">WHO TO&nbsp;&nbsp;PRAY TO</h1>
             </div>
 
             <div class="header-actions">
-              <a class="header-cta" href={`${base}/contact`}>Contact Us</a>
+              <a class="header-cta" href={`${base}/contact`}>CONTACT US</a>
             </div>
           </div>
         </div>
+        <Navigation />
       </header>
 
       <main>
-        {title !== 'Home' && (
-          <div class="content-home-link">
-            <a href={`${base}/`} class="home-button">Home</a>
+        <div class:list={['content-with-image', { 'has-content-image': image }]}>
+          <div class:list={['page-content', { 'has-home-links': title !== 'Home' && showHomeLinks }]}>
+            {image && (
+              <img
+                class="content-image"
+                src={image}
+                alt={`${title} image`}
+                onerror={`this.onerror=null;this.src='${imageFallback}';`}
+              />
+            )}
+            {title !== 'Home' && showHomeLinks && (
+              <div class="content-home-link content-home-link-in-card content-home-link-top-left">
+                <a href={`${base}/`} class="home-button">Home</a>
+              </div>
+            )}
+            <slot />
+            {title !== 'Home' && showHomeLinks && (
+              <div class="content-home-link content-home-link-in-card content-home-link-bottom-right">
+                <a href={`${base}/`} class="home-button">Home</a>
+              </div>
+            )}
           </div>
-        )}
-        <slot />
-        {title !== 'Home' && (
-          <div class="content-home-link content-home-link-bottom">
-            <a href={`${base}/`} class="home-button">Home</a>
-          </div>
-        )}
+        </div>
       </main>
     </div>
   </body>

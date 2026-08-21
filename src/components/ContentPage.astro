@@ -1,0 +1,37 @@
+---
+import { getEntry, render } from 'astro:content';
+import MainLayout from '../layouts/MainLayout.astro';
+
+const { slug } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const entry = await getEntry('pages', slug);
+
+if (!entry) {
+  throw new Error(`Missing content entry for slug: ${slug}`);
+}
+
+const { Content } = await render(entry);
+
+const image = entry.data.image
+  ? /^https?:\/\//.test(entry.data.image)
+    ? entry.data.image
+    : `${base}/${entry.data.image.replace(/^\/+/, '')}`
+  : '';
+
+const sectionClass = entry.data.sectionClass ?? 'page-top';
+---
+
+<MainLayout title={entry.data.title} image={image}>
+  {sectionClass === 'page-top' ? (
+    <section class="page-top">
+      <div class="page-top-inner">
+        <Content />
+      </div>
+    </section>
+  ) : (
+    <section>
+      <Content />
+    </section>
+  )}
+</MainLayout>
